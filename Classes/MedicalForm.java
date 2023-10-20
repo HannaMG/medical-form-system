@@ -1,3 +1,8 @@
+package Classes;
+
+/**
+ * Need to change this to contain only program skeleton
+ */
 public class MedicalForm {
     private String name;
     private int dob;
@@ -7,7 +12,7 @@ public class MedicalForm {
     private int medicalFormID;
     static private int nextID = 0;
 
-    private MedicalForm(String name, int dob, String address, String condition, int alienNumber, int medicalFormID) {
+    public MedicalForm(String name, int dob, String address, String condition, int alienNumber, int medicalFormID) {
        this.name = name;
         this.dob = dob;
         this.address = address;
@@ -17,9 +22,9 @@ public class MedicalForm {
     }
 
     static public int CreateNewMedicalFormID(String name, int dob, String address, String condition, int alienNumber) {
-        MedicalForm mf = new MedicalForm(name, dob, address, condition, alienNumber, nextID);
+        MedicalForm form = new MedicalForm(name, dob, address, condition, alienNumber, nextID);
 
-        //Add mf to database
+        //Add form to database
 
         return  nextID++;
     }

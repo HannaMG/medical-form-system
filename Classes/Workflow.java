@@ -1,7 +1,9 @@
+package Classes;
 /**
  * Imports
  */
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Queue;
 
 /**
@@ -10,9 +12,9 @@ import java.util.Queue;
  * Can also be used by approver to retrieve next steps message.
  */
 public class Workflow {
-    private static Queue<Integer> completeQueue; //Stores completed medical form IDs
-    private static Queue<Integer> savedQueue; //Stores saved medical form IDs
-    private static ArrayList<String[]> nextStepsList; //Stores medical conditions and next steps messages available
+    private static Queue<Integer> completeQueue = new LinkedList<>(); //Stores completed medical form IDs
+    private static Queue<Integer> savedQueue = new LinkedList<>();; //Stores saved medical form IDs
+    private static ArrayList<String[]> nextStepsList = new ArrayList<>(); //Stores medical conditions and next steps messages available
     private static boolean savedEmpty; //Indicates whether the savedQueue is empty or not
     private static boolean completeEmpty; //Indicates whether the completeQueue is empty or not
 
