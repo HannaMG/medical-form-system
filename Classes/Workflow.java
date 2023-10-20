@@ -19,16 +19,16 @@ public class Workflow {
     private static boolean completeEmpty; //Indicates whether the completeQueue is empty or not
 
     /**
-     * Returns the next completed medical form ID available in the completeQueue.
-     * @return next completed medical form ID 
+     * Removes and returns the next completed medical form ID available in the completeQueue.
+     * @return next completed medical form ID or -1 if completeQueue is empty/unsuccessful
      */
     public static int getNextComplete() {
         return 0;
     }
 
     /**
-     * Returns the next saved medical form ID available in the savedQueue.
-     * @return next saved medical form ID
+     * Removes and returns the next saved medical form ID available in the savedQueue.
+     * @return next saved medical form ID or -1 if savedQueue is empty/unsuccessful
      */
     public static int getNextSaved() {
         return 0;
@@ -79,11 +79,22 @@ public class Workflow {
 
     /**
      * Inserts a new medical condition along with its corresponding next steps message to nextStepsList.
+     * Should fail if medical condition is already inserted.
      * @param condition medical condition
      * @param message corresponding next steps message
      * @return true if insert is successful, false otherwise
      */
     public static boolean insertNextSteps(String condition, String message) {
+        return false;
+    }
+
+    /**
+     * Removes an existing medical condition along with its corresponding next steps message from nextStepsList.
+     * Should fail if medical condition is not found.
+     * @param condition medical condition
+     * @return true if successful, false otherwise
+     */
+    public static boolean removeNextSteps(String condition) {
         return false;
     }
 }
