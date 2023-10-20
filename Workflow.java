@@ -10,17 +10,17 @@ import java.util.Queue;
  * Can also be used by approver to retrieve next steps message.
  */
 public class Workflow {
-    Queue<Integer> completeQueue; //Stores completed medical form IDs
-    Queue<Integer> savedQueue; //Stores saved medical form IDs
-    ArrayList<String[]> nextStepsList; //Stores medical conditions and next steps messages available
-    boolean savedEmpty; //Indicates whether the savedQueue is empty or not
-    boolean completeEmpty; //Indicates whether the completeQueue is empty or not
+    private static Queue<Integer> completeQueue; //Stores completed medical form IDs
+    private static Queue<Integer> savedQueue; //Stores saved medical form IDs
+    private static ArrayList<String[]> nextStepsList; //Stores medical conditions and next steps messages available
+    private static boolean savedEmpty; //Indicates whether the savedQueue is empty or not
+    private static boolean completeEmpty; //Indicates whether the completeQueue is empty or not
 
     /**
      * Returns the next completed medical form ID available in the completeQueue.
      * @return next completed medical form ID 
      */
-    int getNextComplete() {
+    public static int getNextComplete() {
         return 0;
     }
 
@@ -28,7 +28,7 @@ public class Workflow {
      * Returns the next saved medical form ID available in the savedQueue.
      * @return next saved medical form ID
      */
-    int getNextSaved() {
+    public static int getNextSaved() {
         return 0;
     }
 
@@ -36,7 +36,7 @@ public class Workflow {
      * Checks if savedQueue is empty.
      * @return true if savedQueue is empty, false otherwise
      */
-    boolean isSavedEmpty() {
+    public static boolean isSavedEmpty() {
         return false;
     }
 
@@ -44,7 +44,7 @@ public class Workflow {
      * Checks if completeQueue is empty.
      * @return true if completeQueue is empty, false otherwise
      */
-    boolean isCompleteEmpty() {
+    public static boolean isCompleteEmpty() {
         return false;
     }
 
@@ -53,7 +53,7 @@ public class Workflow {
      * @param form completed medical form whose ID will be inserted
      * @return true if insert is successful, false otherwise
      */
-    boolean insertComplete(MedicalForm form) {
+    public static boolean insertComplete(MedicalForm form) {
         return false;
     }
 
@@ -62,7 +62,7 @@ public class Workflow {
      * @param form saved medical form whose ID will be inserted
      * @return true if insert is successful, false otherwise
      */
-    boolean insertSaved(MedicalForm form) {
+    public static boolean insertSaved(MedicalForm form) {
         return false;
     }
 
@@ -71,7 +71,7 @@ public class Workflow {
      * @param condition medical condition 
      * @return corresponding next steps message or empty String if none is available for that medical condition
      */
-    String getNextStepsMessage(String condition) {
+    public static String getNextStepsMessage(String condition) {
         return "";
     }
 
@@ -81,7 +81,7 @@ public class Workflow {
      * @param message corresponding next steps message
      * @return true if insert is successful, false otherwise
      */
-    boolean insertNextSteps(String condition, String message) {
+    public static boolean insertNextSteps(String condition, String message) {
         return false;
     }
 }
