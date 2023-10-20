@@ -1,10 +1,14 @@
-//package Classes;
+package Classes;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Fernanda Garcia
  * This class serves as a template for generating medical form instances.
  */
 public class MedicalForm {
+    private static List<MedicalForm> forms = new ArrayList<> ();
     /** Variable to compute the Last, and First name */
     private String name;
     /** Variable to compute the date of birth */
@@ -83,12 +87,11 @@ public class MedicalForm {
     }
     /**
      * Method to get a medical form by its ID.
-     * @param medicalFormID The ID of the medical form to get.
+     * @param formId The ID of the medical form to get.
      * @return medicalForm object.
      */
-    public MedicalForm getForm( int medicalFormID) {
-
-        return this;
+    public static MedicalForm getForm(int formId) {
+        return forms.get(formId);
     }
     /**
      * Method to change the status of the medical form.
