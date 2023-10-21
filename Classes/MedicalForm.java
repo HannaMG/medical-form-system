@@ -8,7 +8,7 @@ import java.util.List;
  * This class serves as a template for generating medical form instances.
  */
 public class MedicalForm {
-    private static List<MedicalForm> forms = new ArrayList<> ();
+    private static List<MedicalForm> forms = new ArrayList<> (); //i had to creat this, otherwise i would get an error to Get.
     /** Variable to compute the Last, and First name */
     private String name;
     /** Variable to compute the date of birth */
