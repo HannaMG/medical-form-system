@@ -10,6 +10,7 @@ import Classes.Workflow;
 import Classes.MedicalForm;;
 
 /**
+ * @author Hanna Mendoza-Garcia
  * Used to test Workflow.java
  */
 public class WorkflowTest {
@@ -17,11 +18,6 @@ public class WorkflowTest {
     private MedicalForm form1 = new MedicalForm("John Doe", 1, "address1", "Covid", 2, 3);
     private MedicalForm form2 = new MedicalForm("Peter Parker", 4, "address2", "Tuberculosis", 5, 6);
     private MedicalForm form3 = new MedicalForm("Mary Jane", 7, "address3", "Chickenpox", 8, 9);
-
-    //Example medical conditions and next steps messages used to test REMOVE LATERRRR
-    String nextSteps1[] = {"Covid", "Need to quarantine"};
-    String nextSteps2[] = {"Tuberculosis", "Keep room ventilated"};
-    String nextSteps3[] = {"Chickenpox", "Avoid scratching and avoid contact with others"};
 
     /**
      * Check if single form is correctly inserted and returned from completeQueue.

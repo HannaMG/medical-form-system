@@ -7,6 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
+ * @author Hanna Mendoza-Garcia
  * Workflow stores and gives Data Entry and Approver the next available medical form ID to work on.
  * Database passes medical form IDs to the Workflow.
  * Can also be used by approver to retrieve next steps message.
